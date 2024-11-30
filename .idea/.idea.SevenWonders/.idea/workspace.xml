@@ -7,17 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc5b531f-67a1-4789-b500-ecc81826337a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SevenWonders/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SevenWonders/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/ManufacturedGoodsCard.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/RawMaterialsCard.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/ScienceCard.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/VictoryPointsCard.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/WarCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SevenWonders/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SevenWonders/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SevenWonders/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SevenWonders/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bc5b531f-67a1-4789-b500-ecc81826337a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +28,7 @@
     "accountId": "7f424373-c5f0-4120-af2b-d96a6c6ad702"
   }
 }]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
 }]]></component>
@@ -87,16 +78,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732994402815</updated>
-      <workItem from="1732994404484" duration="741000" />
+      <workItem from="1732994404484" duration="995000" />
     </task>
+    <task id="LOCAL-00001" summary="Creating Cards Models">
+      <option name="closed" value="true" />
+      <created>1732995182394</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732995182394</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updating .idea">
+      <option name="closed" value="true" />
+      <created>1732995308003</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732995308003</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Creating Cards Models" />
+    <MESSAGE value="Updating .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating .idea" />
   </component>
 </project>
