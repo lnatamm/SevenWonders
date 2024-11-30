@@ -7,7 +7,7 @@ public class WarCard
 
     public string Age
     {
-        get;
+        get => _age;
     }
 
     public int Shields
