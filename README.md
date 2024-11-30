@@ -1,0 +1,1 @@
+Pequeno projeto para desenvolver um aplicativo de console do jogo de tabuleiro "Seven Wonders"
