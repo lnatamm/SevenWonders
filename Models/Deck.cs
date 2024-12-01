@@ -3,15 +3,20 @@
 public class Deck
 {
     private List<Card> _cards;
+    
+    public List<Card> Cards { get => _cards;}
+    public int Size { get => _cards.Count;}
 
     public Deck()
     {
         _cards = new List<Card>();
     }
 
-    public void AddCard(Card card)
+    public Card Draw()
     {
-        _cards.Add(card);
+        Card card = _cards[_cards.Count - 1];
+        _cards.RemoveAt(_cards.Count - 1);
+        return card;
     }
 
     public override string ToString()
@@ -19,7 +24,7 @@ public class Deck
         string output = "";
         foreach (Card card in _cards)
         {
-            output += $"Age: {card.Age}\nName: {card.Name}\nType: {card.Type}\nMinimum of Players: {card.MinimumPlayers}\n\n";
+            output += card.ToString() + "\n";
         }
         return output;
     }
