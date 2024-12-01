@@ -15,18 +15,7 @@ List<Card> allCards = new List<Card>()
     new ResourceCard(age:1, name:"Clay Pit", type:"Raw Material", minimumPlayers:3 , resources:new List<string>(){"Clay", "Ore"}),
 };
 
-void addCardsToDeck(Deck deck, List<Card> cards, int numberOfPlayers)
-{
-    foreach (Card card in cards)
-    {
-        if (card.MinimumPlayers <= numberOfPlayers)
-        {
-            deck.AddCard(card);
-        }
-    }
-}
-
-bool validateRange(int x, int op)
+bool ValidateRange(int x, int op)
 {
     switch (op)
     {
@@ -36,40 +25,71 @@ bool validateRange(int x, int op)
     }
 }
 
-int inputInt(int op)
+int InputInt(int op)
 {
     int value;
     if (!int.TryParse(Console.ReadLine(), out value))
     {
-        return inputInt(op);   
+        return InputInt(op);   
     }
-    if (!validateRange(value, op))
+    if (!ValidateRange(value, op))
     {
-        return inputInt(op);
+        return InputInt(op);
     }
     return value;
 }
 
-void print(Object message)
+void Print(Object message)
 {
     Console.WriteLine(message);
 }
 
-void printMenu()
+void Clear()
+{
+    Console.Clear();
+}
+
+void PrintMenu()
 {
     Console.WriteLine("Hello Welcome to Seven Wonders!");
     Console.WriteLine("1 - Start Game");
     Console.WriteLine("Anything Else - End Game");
 }
 
-printMenu();
-int value = inputInt(1);
+void AddCardsToDeck(Deck deck, List<Card> cards, int age, int numberOfPlayers)
+{
+    foreach (Card card in cards)
+    {
+        if (card.Age == age && card.MinimumPlayers <= numberOfPlayers)
+        {
+            deck.Cards.Add(card);
+        }
+    }
+}
+
+void Shuffle(Deck deck)
+{
+    Random random = new Random();
+    int n = deck.Size;
+    for (int i = (n - 1); i > 0; i--) 
+    {
+        int j = random.Next(0, i+1);
+        (deck.Cards[i], deck.Cards[j]) = (deck.Cards[j], deck.Cards[i]);
+    }
+}
+
+PrintMenu();
+int value = InputInt(1);
 if (value == 1)
 {
-    Deck deck = new Deck();
-    print("How many players?");
-    int numberOfPlayers = inputInt(1);
-    addCardsToDeck(deck, allCards, numberOfPlayers);
-    print(deck);
+    Clear();
+    Deck deckAgeI = new Deck();
+    Print("How many players?");
+    int numberOfPlayers = InputInt(1);
+    Clear();
+    AddCardsToDeck(deckAgeI, allCards, 1, numberOfPlayers);
+    Shuffle(deckAgeI);
+    Print(deckAgeI);
+    Print($"Drawed Card:\n{deckAgeI.Draw()}");
 }
 
