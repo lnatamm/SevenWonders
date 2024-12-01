@@ -67,17 +67,6 @@ void AddCardsToDeck(Deck deck, List<Card> cards, int age, int numberOfPlayers)
     }
 }
 
-void Shuffle(Deck deck)
-{
-    Random random = new Random();
-    int n = deck.Size;
-    for (int i = (n - 1); i > 0; i--) 
-    {
-        int j = random.Next(0, i+1);
-        (deck.Cards[i], deck.Cards[j]) = (deck.Cards[j], deck.Cards[i]);
-    }
-}
-
 PrintMenu();
 int value = InputInt(1);
 if (value == 1)
@@ -88,7 +77,7 @@ if (value == 1)
     int numberOfPlayers = InputInt(1);
     Clear();
     AddCardsToDeck(deckAgeI, allCards, 1, numberOfPlayers);
-    Shuffle(deckAgeI);
+    Shuffler.Shuffle(deckAgeI);
     Print(deckAgeI);
     Print($"Drawed Card:\n{deckAgeI.Draw()}");
 }
