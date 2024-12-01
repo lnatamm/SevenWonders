@@ -13,4 +13,9 @@ public class ValueCard : Card
     {
         _value = value;
     }
+
+    public override string ToString()
+    {
+        return $"Age: {Age}\nName:{Name}\nType:{Type}\nMinimum Players:{MinimumPlayers}\nValue:{Value}\n\n";
+    }
 }

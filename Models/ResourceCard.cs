@@ -13,4 +13,14 @@ public class ResourceCard : Card
     {
         _resources = resources;
     }
+
+    public override string ToString()
+    {
+        string output = $"Age: {Age}\nName:{Name}\nType:{Type}\nMinimum Players:{MinimumPlayers}\nResources:\n";
+        foreach (string resource in _resources)
+        {
+            output += $"{resource}\n";
+        }
+        return output;
+    }
 }
