@@ -15,6 +15,13 @@ public class Player
     {
         get => _name;
     }
+
+    public int Coins
+    {
+        get => _coins;
+        set => _coins = value;
+    }
+
     public List<string> Resources
     {
         get => _resources;
@@ -43,6 +50,7 @@ public class Player
     public Player(string name, AbstractWonder wonder)
     {
         _name = name;
+        _coins = 3;
         _resources = new List<string>();
         _sciencePoints = new List<int>(){0, 0, 0};
         _shields = 0;
@@ -51,9 +59,14 @@ public class Player
         _cards = new List<Card>();
     }
 
+    public void AddCard(Card card)
+    {
+        _cards.Add(card);
+    }
+
     public override string ToString()
     {
-        string output = $"Name: {Name}\nResources:\n";
+        string output = $"Name: {Name}\nCoins: {Coins}\nResources:\n";
         foreach (string resource in _resources)
         {
             output += $"{resource}\n";

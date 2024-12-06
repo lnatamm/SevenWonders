@@ -11,6 +11,10 @@ public class Deck
     {
         _cards = new List<Card>();
     }
+    public Deck(List<Card> cards)
+    {
+        _cards = cards;
+    }
 
     public Card Draw()
     {
